@@ -42,7 +42,7 @@ Procedure:
 |---------|---------|
 | ![Alt 1](results/detections_2025-08-20_02-18/C_02_31_013_png.rf.8f7be20eb8086e0e51bf5e9e3bac537b.jpg) | ![Alt 2](results/detections_2025-08-20_02-18/IMG_1168_JPG.rf.8cb4ea5cb8314bf6aa8b6b91a17820f8.jpg) |
 
-Note: intersection over union (iou) - the ratio of the intersection of the two boxes areas to their combined areas. If iou > 0.1, then action labelled as 'Hand grasp object' else 'No grasp'
+Note: intersection over union (iou) - the ratio of the intersection of the two boxes areas to their combined areas. If **iou > 0.01**, then action labelled as 'Hand grasp object' else 'No grasp'
 
 5. References
 
