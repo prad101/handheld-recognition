@@ -20,7 +20,7 @@ Procedure:
     (These sets includes augmented images. Augmentations used are 90 deg rotate, shear, noise, slight rotations)
     - Each image will have its own label file with coordinates for the hand/object annotated location.
 
-    <img src="datasets/hand_object_grasp_v6/test/images/IMG_1168_JPG.rf.8cb4ea5cb8314bf6aa8b6b91a17820f8.jpg" width="300"/> <img src="datasets/hand_object_grasp_v6/test/images/C_02_31_013_png.rf.8f7be20eb8086e0e51bf5e9e3bac537b.jpg" width="300"/>
+    <img src="datasets/hand_object_grasp_v6/test/images/C_02_31_013_png.rf.8f7be20eb8086e0e51bf5e9e3bac537b.jpg" width="300"/> </br> <img src="datasets/hand_object_grasp_v6/test/images/IMG_1168_JPG.rf.8cb4ea5cb8314bf6aa8b6b91a17820f8.jpg" width="300"/>
 
 2. Model and training
 
@@ -35,4 +35,8 @@ Procedure:
 
 4. Visualizing results
 
-    <img src="results/detections_2025-08-20_02-18/11IMG__jpg.rf.b75219dff9e769996b4123392258fa98.jpg" width="300"/> <img src="results/detections_2025-08-20_02-18/C_02_31_013_png.rf.8f7be20eb8086e0e51bf5e9e3bac537b.jpg" width="300"/>
+| Hand grasp object (iou > 0.01) | No grasp (iou < 0.01) 
+|---------|---------|
+| ![Alt 1](results/detections_2025-08-20_02-18/C_02_31_013_png.rf.8f7be20eb8086e0e51bf5e9e3bac537b.jpg) | ![Alt 2](results/detections_2025-08-20_02-18/IMG_1168_JPG.rf.8cb4ea5cb8314bf6aa8b6b91a17820f8.jpg) |
+
+Note: intersection over union (iou) - the ratio of the intersection of the two boxes areas to their combined areas.
