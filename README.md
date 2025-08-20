@@ -20,7 +20,10 @@ Procedure:
     (These sets includes augmented images. Augmentations used are 90 deg rotate, shear, noise, slight rotations)
     - Each image will have its own label file with coordinates for the hand/object annotated location.
 
-    <img src="datasets/hand_object_grasp_v6/test/images/C_02_31_013_png.rf.8f7be20eb8086e0e51bf5e9e3bac537b.jpg" width="300"/> </br> <img src="datasets/hand_object_grasp_v6/test/images/IMG_1168_JPG.rf.8cb4ea5cb8314bf6aa8b6b91a17820f8.jpg" width="300"/>
+    | Sample image 1 | Sample image 2 
+    |---------|---------|
+    | ![Alt 1](datasets/hand_object_grasp_v6/test/images/C_02_31_013_png.rf.8f7be20eb8086e0e51bf5e9e3bac537b.jpg) | ![Alt 2](datasets/hand_object_grasp_v6/test/images/IMG_1168_JPG.rf.8cb4ea5cb8314bf6aa8b6b91a17820f8.jpg) |
+
 
 2. Model and training
 
@@ -35,8 +38,13 @@ Procedure:
 
 4. Visualizing results
 
-| Hand grasp object (iou > 0.01) | No grasp (iou < 0.01) 
+| Hand grasp object (iou = 0.18) | No grasp (iou = 0) 
 |---------|---------|
 | ![Alt 1](results/detections_2025-08-20_02-18/C_02_31_013_png.rf.8f7be20eb8086e0e51bf5e9e3bac537b.jpg) | ![Alt 2](results/detections_2025-08-20_02-18/IMG_1168_JPG.rf.8cb4ea5cb8314bf6aa8b6b91a17820f8.jpg) |
 
-Note: intersection over union (iou) - the ratio of the intersection of the two boxes areas to their combined areas.
+Note: intersection over union (iou) - the ratio of the intersection of the two boxes areas to their combined areas. If iou > 0.1, then action labelled as 'Hand grasp object' else 'No grasp'
+
+5. References
+
+- [YOLOv5 GitHub Repository](https://github.com/ultralytics/yolov5)  
+- [Roboflow](https://roboflow.com)  
