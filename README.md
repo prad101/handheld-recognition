@@ -3,7 +3,7 @@
 
 **Problem Statement**: To detect hands, objects and classify the actions as handheld or not using images.
 
-    There are two parts in the project,
+    There are two parts in this project,
     1. Hand and object detection using yolov5s (by fine-tuning a pretrained model with hands, objects and combinational)
     2. Classifying action as hand held object or not by using metrics returned by yolov5
 
@@ -34,22 +34,24 @@
     - Training part is commented, run accordingly. (Skip if performing inference only)
 
 
-3. **Inference/Detections**
+3. **Detections and classification**
 
     1. A yolov5 model fine tuned with custom dataset returns hand and object detections with confidence metrics
     2. Utilizing confidence metrics and iou scores to classify the image as 'hand grasp object' or 'no grasp'
 
 
-4. **Visualizing results**
+4. **Results**
 
     | Hand grasp object (iou = 0.18) | No grasp (iou = 0) 
     |---------|---------|
     | ![Alt 1](results/detections_2025-08-20_02-18/C_02_31_013_png.rf.8f7be20eb8086e0e51bf5e9e3bac537b.jpg) | ![Alt 2](results/detections_2025-08-20_02-18/IMG_1168_JPG.rf.8cb4ea5cb8314bf6aa8b6b91a17820f8.jpg) |
 
-    Note: intersection over union (iou) - the ratio of the intersection of the two boxes areas to their combined areas. If **iou > 0.01**, then action labelled as 'Hand grasp object' else 'No grasp'
+    Note: 
+     - Intersection over union (iou) - the ratio of the intersection of the two boxes areas to their combined areas. 
+     - If hand, object exists and **iou > 0.01**, then action labelled as 'Hand grasp object' else 'No grasp'
 
 
-5. References
+5. **References**
 
     - [YOLOv5 GitHub Repository](https://github.com/ultralytics/yolov5)  
     - [Roboflow](https://roboflow.com)  
